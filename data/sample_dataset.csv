@@ -1,0 +1,128 @@
+﻿sentence_id,sentence,aspect,label
+25,Akademik açıdan harika.,Eğitim Kalitesi,1
+44,Okulun güvenliğinden çok memnunuz. Ayrıca yemekleri de sağlıklı ve okul tertemiz.,Güvenlik,1
+44,Okulun güvenliğinden çok memnunuz. Ayrıca yemekleri de sağlıklı ve okul tertemiz.,Temizlik ve Hijyen,1
+44,Okulun güvenliğinden çok memnunuz. Ayrıca yemekleri de sağlıklı ve okul tertemiz.,Yemek ve Beslenme,1
+46,vreilen hizmete bakildiginda da fiyatları çk uygun.,Ücret ve Finansal,1
+46,vreilen hizmete bakildiginda da fiyatları çk uygun.,Personel ve Hizmet,1
+57,Ticarethaane gibi çalışan bir okul,Genel Değerlendirme,0
+59,Okul tertemiz. Sınıflar düzenli ve donanımlı. Fiziksel imkanlarından çok memnunuz. Çocuğum okuldayken çok mutlu ve huzurlu. Çünkü öğretmenleri çok ilgili ve verilen eğitim çok iyi.,Fiziksel İmkanlar,1
+59,Okul tertemiz. Sınıflar düzenli ve donanımlı. Fiziksel imkanlarından çok memnunuz. Çocuğum okuldayken çok mutlu ve huzurlu. Çünkü öğretmenleri çok ilgili ve verilen eğitim çok iyi.,Genel Değerlendirme,1
+59,Okul tertemiz. Sınıflar düzenli ve donanımlı. Fiziksel imkanlarından çok memnunuz. Çocuğum okuldayken çok mutlu ve huzurlu. Çünkü öğretmenleri çok ilgili ve verilen eğitim çok iyi.,Eğitim Kalitesi,1
+59,Okul tertemiz. Sınıflar düzenli ve donanımlı. Fiziksel imkanlarından çok memnunuz. Çocuğum okuldayken çok mutlu ve huzurlu. Çünkü öğretmenleri çok ilgili ve verilen eğitim çok iyi.,Öğretmen Kadrosu,1
+96,ıSrdan okullara kiyasla pek çok imkana sahip. Ders çeşitliliği fazla oan bir okull,Ders Çeşitliliği,1
+96,ıSrdan okullara kiyasla pek çok imkana sahip. Ders çeşitliliği fazla oan bir okull,Fiziksel İmkanlar,1
+130,"Öğrenci kulupleri çok yetersiz. Onun haricinde sınıfları donanimli, güvenlik üst düzy, yemekler sağlıklı ve hijyenik koşullarda hazırlanıyor",Güvenlik,1
+130,"Öğrenci kulupleri çok yetersiz. Onun haricinde sınıfları donanimli, güvenlik üst düzy, yemekler sağlıklı ve hijyenik koşullarda hazırlanıyor",Yemek ve Beslenme,1
+130,"Öğrenci kulupleri çok yetersiz. Onun haricinde sınıfları donanimli, güvenlik üst düzy, yemekler sağlıklı ve hijyenik koşullarda hazırlanıyor",Sosyal ve Kültürel Etkinlikler,0
+130,"Öğrenci kulupleri çok yetersiz. Onun haricinde sınıfları donanimli, güvenlik üst düzy, yemekler sağlıklı ve hijyenik koşullarda hazırlanıyor",Fiziksel İmkanlar,1
+158,Ticarethaneye dönüşmüş özel bir okul.,Genel Değerlendirme,0
+206,Bahçesi büyük ve güvenliği elden bırakmayan bir okul. Okulda disiplinli bir hava hissediliyor.  Genel olarak memnunum. En önemlisi iyi bir ingilizce eğitimi var.,Disiplin,1
+206,Bahçesi büyük ve güvenliği elden bırakmayan bir okul. Okulda disiplinli bir hava hissediliyor.  Genel olarak memnunum. En önemlisi iyi bir ingilizce eğitimi var.,Güvenlik,1
+206,Bahçesi büyük ve güvenliği elden bırakmayan bir okul. Okulda disiplinli bir hava hissediliyor.  Genel olarak memnunum. En önemlisi iyi bir ingilizce eğitimi var.,Yabancı Dil Eğitimi,1
+206,Bahçesi büyük ve güvenliği elden bırakmayan bir okul. Okulda disiplinli bir hava hissediliyor.  Genel olarak memnunum. En önemlisi iyi bir ingilizce eğitimi var.,Fiziksel İmkanlar,1
+219,Okul çıkışları güvensiz. Yoğun trafikte çocukların güvenli çıkışı sağlanmıyor.,Ulaşım ve Konum,0
+219,Okul çıkışları güvensiz. Yoğun trafikte çocukların güvenli çıkışı sağlanmıyor.,Güvenlik,0
+235,Öğrenciiler arrasında kaygıve stres düzeyi cok yükek.,Öğrenci Gelişimi,0
+258,Fiziksel imkanlar iyi ama öğrencilerin okul dışındaki toplumla bağ kurmasına fırsat tanınmıyor.,Sosyal ve Kültürel Etkinlikler,0
+258,Fiziksel imkanlar iyi ama öğrencilerin okul dışındaki toplumla bağ kurmasına fırsat tanınmıyor.,Fiziksel İmkanlar,1
+273,Eğitim iyi ama iletişim kuralları çok kati. Velilerin öğretmenlerle görüşmesi kisitlanmis,Eğitim Kalitesi,1
+273,Eğitim iyi ama iletişim kuralları çok kati. Velilerin öğretmenlerle görüşmesi kisitlanmis,Veli İletişimi,0
+283,"Okulda verilen hizmetler kusursuz. Yemekleri lezzetli ve sağlıklı. Güvenik önlemleri yeterli. Her yer temiz, sağlık konusunda çocuklar koul revirini kllanabiliyor",Güvenlik,1
+283,"Okulda verilen hizmetler kusursuz. Yemekleri lezzetli ve sağlıklı. Güvenik önlemleri yeterli. Her yer temiz, sağlık konusunda çocuklar koul revirini kllanabiliyor",Yemek ve Beslenme,1
+283,"Okulda verilen hizmetler kusursuz. Yemekleri lezzetli ve sağlıklı. Güvenik önlemleri yeterli. Her yer temiz, sağlık konusunda çocuklar koul revirini kllanabiliyor",Personel ve Hizmet,1
+283,"Okulda verilen hizmetler kusursuz. Yemekleri lezzetli ve sağlıklı. Güvenik önlemleri yeterli. Her yer temiz, sağlık konusunda çocuklar koul revirini kllanabiliyor",Temizlik ve Hijyen,1
+286,"Zengin bir kütüphaneleri var ve öğrenciler belirlenen zamanlarda kullanabiliyor. Diğer fiziksel özellikleri de son derece iyi, Temizliğe önem veriliyor okulda. Sınıflar çok kalabalık değil.",Temizlik ve Hijyen,1
+286,"Zengin bir kütüphaneleri var ve öğrenciler belirlenen zamanlarda kullanabiliyor. Diğer fiziksel özellikleri de son derece iyi, Temizliğe önem veriliyor okulda. Sınıflar çok kalabalık değil.",Fiziksel İmkanlar,1
+360,eğtiim bakımından nitelili ve ellerinden gelenin her zaman daa iyisini yapmaya çalışan bir kadro var. Öğretmenimizden de memnunuz. Okulun yapısı bir aile gibi olduğundan güvenlik bakımından da gözüm arkada değil.,Öğretmen Kadrosu,1
+360,eğtiim bakımından nitelili ve ellerinden gelenin her zaman daa iyisini yapmaya çalışan bir kadro var. Öğretmenimizden de memnunuz. Okulun yapısı bir aile gibi olduğundan güvenlik bakımından da gözüm arkada değil.,Güvenlik,1
+373,Bilim etkinlikleri yalnızca yılda bir kez yapılıyor. Sürekli bir program yok.,Sosyal ve Kültürel Etkinlikler,0
+410,"Genç ve yenilikçi bir karoya sahip, yüksek standartları oan bir kolej.",Genel Değerlendirme,1
+410,"Genç ve yenilikçi bir karoya sahip, yüksek standartları oan bir kolej.",Öğretmen Kadrosu,1
+447,Çevredeki okullara kıyaslamak gerekirse bir cag önden giden bir okl Eğitimden de olanaklardan da memnunuz. Yalnızca çok fazzla masraf çıması hoş olmuyor,Fiziksel İmkanlar,1
+447,Çevredeki okullara kıyaslamak gerekirse bir cag önden giden bir okl Eğitimden de olanaklardan da memnunuz. Yalnızca çok fazzla masraf çıması hoş olmuyor,Eğitim Kalitesi,1
+447,Çevredeki okullara kıyaslamak gerekirse bir cag önden giden bir okl Eğitimden de olanaklardan da memnunuz. Yalnızca çok fazzla masraf çıması hoş olmuyor,Genel Değerlendirme,1
+447,Çevredeki okullara kıyaslamak gerekirse bir cag önden giden bir okl Eğitimden de olanaklardan da memnunuz. Yalnızca çok fazzla masraf çıması hoş olmuyor,Ücret ve Finansal,0
+487,Müthiş ortaıyla müthiş bir okull Cocuklar gidemedikleri zaman üzülüyorlar.,Fiziksel İmkanlar,1
+487,Müthiş ortaıyla müthiş bir okull Cocuklar gidemedikleri zaman üzülüyorlar.,Genel Değerlendirme,1
+557,Güvnlik kameraları var ama kayıtlar izlenmiyor. Güevnlik personeli ilgisiz.,Güvenlik,0
+578,özellikle hocaları çok ilgili. rehberlik servisiylede bizi surekli bilgilendiriyolar. seneyede burdayiz :),Rehberlik ve Psikolojik Destek,1
+578,özellikle hocaları çok ilgili. rehberlik servisiylede bizi surekli bilgilendiriyolar. seneyede burdayiz :),Öğretmen Kadrosu,1
+583,"Fiziksel imkanlar iyi ama okul, dezavantajlı öğrencilere pozitif ayrımcılık uygulamıyor.",Fiziksel İmkanlar,1
+583,"Fiziksel imkanlar iyi ama okul, dezavantajlı öğrencilere pozitif ayrımcılık uygulamıyor.",Rehberlik ve Psikolojik Destek,0
+605,kOul web sitesi çokk eksi ve gnücellenmiyor.Blgiye ulaşmak neredeyse imkânsız.,Teknoloji,0
+605,kOul web sitesi çokk eksi ve gnücellenmiyor.Blgiye ulaşmak neredeyse imkânsız.,Veli İletişimi,0
+608,Eğitiminden çok memnnuz. Öğretmenleeri ve okul  yoneticisi velilerle sürekli iletisim halidne ve bir sorunumuz olduğunda bizi dinleyip yardimci oluyor.,Eğitim Kalitesi,1
+608,Eğitiminden çok memnnuz. Öğretmenleeri ve okul  yoneticisi velilerle sürekli iletisim halidne ve bir sorunumuz olduğunda bizi dinleyip yardimci oluyor.,Öğretmen Kadrosu,1
+608,Eğitiminden çok memnnuz. Öğretmenleeri ve okul  yoneticisi velilerle sürekli iletisim halidne ve bir sorunumuz olduğunda bizi dinleyip yardimci oluyor.,Yönetim ve İdare,1
+628,"Eğitimi çok iiy öğrenci kulüplri çokk ii, sağlık, hijyen,güvenlik, öğretmn profili on numara bir okul  Çokk memnûn kaldık. başarılarının devamini diliyorum ve iiy ki böle okullar var dyorum",Personel ve Hizmet,1
+628,"Eğitimi çok iiy öğrenci kulüplri çokk ii, sağlık, hijyen,güvenlik, öğretmn profili on numara bir okul  Çokk memnûn kaldık. başarılarının devamini diliyorum ve iiy ki böle okullar var dyorum",Eğitim Kalitesi,1
+628,"Eğitimi çok iiy öğrenci kulüplri çokk ii, sağlık, hijyen,güvenlik, öğretmn profili on numara bir okul  Çokk memnûn kaldık. başarılarının devamini diliyorum ve iiy ki böle okullar var dyorum",Sosyal ve Kültürel Etkinlikler,1
+628,"Eğitimi çok iiy öğrenci kulüplri çokk ii, sağlık, hijyen,güvenlik, öğretmn profili on numara bir okul  Çokk memnûn kaldık. başarılarının devamini diliyorum ve iiy ki böle okullar var dyorum",Öğretmen Kadrosu,1
+628,"Eğitimi çok iiy öğrenci kulüplri çokk ii, sağlık, hijyen,güvenlik, öğretmn profili on numara bir okul  Çokk memnûn kaldık. başarılarının devamini diliyorum ve iiy ki böle okullar var dyorum",Temizlik ve Hijyen,1
+628,"Eğitimi çok iiy öğrenci kulüplri çokk ii, sağlık, hijyen,güvenlik, öğretmn profili on numara bir okul  Çokk memnûn kaldık. başarılarının devamini diliyorum ve iiy ki böle okullar var dyorum",Güvenlik,1
+640,"Şimdilik gayet memnunuz. Yemekler, güvenlik, servis iyi. Ders çeşitliliği de çok.",Ulaşım ve Konum,1
+640,"Şimdilik gayet memnunuz. Yemekler, güvenlik, servis iyi. Ders çeşitliliği de çok.",Ders Çeşitliliği,1
+640,"Şimdilik gayet memnunuz. Yemekler, güvenlik, servis iyi. Ders çeşitliliği de çok.",Yemek ve Beslenme,1
+640,"Şimdilik gayet memnunuz. Yemekler, güvenlik, servis iyi. Ders çeşitliliği de çok.",Güvenlik,1
+645,Disiplinli ve tecrübeli öğretmenleri barındıran bir okull,Disiplin,1
+645,Disiplinli ve tecrübeli öğretmenleri barındıran bir okull,Öğretmen Kadrosu,1
+651,"branş dersleri, dil eğitimi ve rehberlik servisi çok iyi. her alanda faydaısnı gördü kızım.",Rehberlik ve Psikolojik Destek,1
+651,"branş dersleri, dil eğitimi ve rehberlik servisi çok iyi. her alanda faydaısnı gördü kızım.",Ders Çeşitliliği,1
+651,"branş dersleri, dil eğitimi ve rehberlik servisi çok iyi. her alanda faydaısnı gördü kızım.",Yabancı Dil Eğitimi,1
+667,Konumu çok güzel. Eğitii cok iyii hocaları çok ilglili icimiz rahat bir şekide yolluyoruz çocuklarımızı,Eğitim Kalitesi,1
+667,Konumu çok güzel. Eğitii cok iyii hocaları çok ilglili icimiz rahat bir şekide yolluyoruz çocuklarımızı,Ulaşım ve Konum,1
+667,Konumu çok güzel. Eğitii cok iyii hocaları çok ilglili icimiz rahat bir şekide yolluyoruz çocuklarımızı,Öğretmen Kadrosu,1
+677,Bina iyi görünüyor ama kış aylarında nemli ve soğuk oluyor. Sağlık riski var.,Fiziksel İmkanlar,1
+677,Bina iyi görünüyor ama kış aylarında nemli ve soğuk oluyor. Sağlık riski var.,Fiziksel İmkanlar,0
+677,Bina iyi görünüyor ama kış aylarında nemli ve soğuk oluyor. Sağlık riski var.,Personel ve Hizmet,0
+710,"Verdikleri hizmetten cok memnunuz. Yemekler olsun güvenlik, sağlık, temizlik hepsi de dört dörtlük. Tüm personelleri tecrüebli ve işlerinii severek yapıyor.",Güvenlik,1
+710,"Verdikleri hizmetten cok memnunuz. Yemekler olsun güvenlik, sağlık, temizlik hepsi de dört dörtlük. Tüm personelleri tecrüebli ve işlerinii severek yapıyor.",Personel ve Hizmet,1
+710,"Verdikleri hizmetten cok memnunuz. Yemekler olsun güvenlik, sağlık, temizlik hepsi de dört dörtlük. Tüm personelleri tecrüebli ve işlerinii severek yapıyor.",Temizlik ve Hijyen,1
+710,"Verdikleri hizmetten cok memnunuz. Yemekler olsun güvenlik, sağlık, temizlik hepsi de dört dörtlük. Tüm personelleri tecrüebli ve işlerinii severek yapıyor.",Yemek ve Beslenme,1
+759,Öğrencilerin okull kurallarina itiraz etem hakkı tanınmıyr,Yönetim ve İdare,0
+789,Verdiği eğitim ve ücret gayet malum.,Eğitim Kalitesi,1
+789,Verdiği eğitim ve ücret gayet malum.,Ücret ve Finansal,0
+790,Kaliteli bir eğitimin yanında soyal sorumluluk çalışmalarıyla da çocuklara güzel bir örnek olan okul.,Genel Değerlendirme,1
+790,Kaliteli bir eğitimin yanında soyal sorumluluk çalışmalarıyla da çocuklara güzel bir örnek olan okul.,Eğitim Kalitesi,1
+798,"Eğitimi, temizliği, okuldaki öğretmenler. hepsi diğer okulların önündedir...",Eğitim Kalitesi,1
+798,"Eğitimi, temizliği, okuldaki öğretmenler. hepsi diğer okulların önündedir...",Temizlik ve Hijyen,1
+798,"Eğitimi, temizliği, okuldaki öğretmenler. hepsi diğer okulların önündedir...",Öğretmen Kadrosu,1
+857,"Velilerre yapılan toplantılarda sout bilgi verilmiyor,, genel laflarla gecistiriliyor.",Veli İletişimi,0
+892,"Eğitim kalitesiyle, yabancı dil eğitimiyle hatta bütünüyle raikplerinden bir değil on adım ötede bir okul. biz çokk memnun kaldık size de tavsiye ederim:)",Eğitim Kalitesi,1
+892,"Eğitim kalitesiyle, yabancı dil eğitimiyle hatta bütünüyle raikplerinden bir değil on adım ötede bir okul. biz çokk memnun kaldık size de tavsiye ederim:)",Genel Değerlendirme,1
+892,"Eğitim kalitesiyle, yabancı dil eğitimiyle hatta bütünüyle raikplerinden bir değil on adım ötede bir okul. biz çokk memnun kaldık size de tavsiye ederim:)",Yabancı Dil Eğitimi,1
+906,brans derselrinde olduğu kadar sosyal aktivitelerde ve öğrencii kulüplerinde de iyiler.,Sosyal ve Kültürel Etkinlikler,1
+906,brans derselrinde olduğu kadar sosyal aktivitelerde ve öğrencii kulüplerinde de iyiler.,Ders Çeşitliliği,1
+945,pahalı ve saçma bir fiziki yapıya sahip.,Ücret ve Finansal,0
+945,pahalı ve saçma bir fiziki yapıya sahip.,Fiziksel İmkanlar,0
+972,Okulun fziksel tasarımında en son  teknoloji ve öğrnci odaklı dizaynlar kullanılmış. Göz alıcı bir okul.,Fiziksel İmkanlar,1
+1009,"Okul, başarısız öğrencilere ek destek sağlamak yreine onalrı görmezden geliyor.",Rehberlik ve Psikolojik Destek,0
+1022,Eğitim iyi ama okulda öğrencilerin medya okuryazarlığını geliştirmeye yönelik hiçbir etkinlik yok.,Öğrenci Gelişimi,0
+1022,Eğitim iyi ama okulda öğrencilerin medya okuryazarlığını geliştirmeye yönelik hiçbir etkinlik yok.,Eğitim Kalitesi,1
+1032,Öğretmenleri çk özerili fziksel ikmanları da gayet iyi,Fiziksel İmkanlar,1
+1032,Öğretmenleri çk özerili fziksel ikmanları da gayet iyi,Öğretmen Kadrosu,1
+1066,sosyal ve teknolojik imkanları gerçektn iiy kızımız arkadaşlarıyla da iyi analşıyor. Bir sorun yok gibi,Teknoloji,1
+1066,sosyal ve teknolojik imkanları gerçektn iiy kızımız arkadaşlarıyla da iyi analşıyor. Bir sorun yok gibi,Sosyal ve Kültürel Etkinlikler,1
+1094,Okulun bizlerle olan ikili diyolagları ve çocuklarla iletişimi çok iyi.,Veli İletişimi,1
+1152,yabancı dil eğitimi iyi. Öğretmenleri çok ilgili. sınıflar kalablaık değil. Yeekleri de güzel ve sağlıklı.,Yabancı Dil Eğitimi,1
+1152,yabancı dil eğitimi iyi. Öğretmenleri çok ilgili. sınıflar kalablaık değil. Yeekleri de güzel ve sağlıklı.,Yemek ve Beslenme,1
+1152,yabancı dil eğitimi iyi. Öğretmenleri çok ilgili. sınıflar kalablaık değil. Yeekleri de güzel ve sağlıklı.,Fiziksel İmkanlar,1
+1152,yabancı dil eğitimi iyi. Öğretmenleri çok ilgili. sınıflar kalablaık değil. Yeekleri de güzel ve sağlıklı.,Öğretmen Kadrosu,1
+1168,Öğretmenleri tecrübeli ve çok ilgili verilen eğitimin kalitesini doğrudan etkilediği için bu durumdan biz de çocuğumuz da çok memnun.,Öğretmen Kadrosu,1
+1168,Öğretmenleri tecrübeli ve çok ilgili verilen eğitimin kalitesini doğrudan etkilediği için bu durumdan biz de çocuğumuz da çok memnun.,Eğitim Kalitesi,1
+1179,Fiziksel imkanlar iyi am a öğrencilerin yaratıcı yaazrlık gibi sanastal alanlarda kendiin ifade etmessine alanaçılmıyor.,Öğrenci Gelişimi,0
+1179,Fiziksel imkanlar iyi am a öğrencilerin yaratıcı yaazrlık gibi sanastal alanlarda kendiin ifade etmessine alanaçılmıyor.,Fiziksel İmkanlar,1
+1188,Dil eğitimi çok iyi.,Yabancı Dil Eğitimi,1
+1239,Ülkemizde teknolojik imkanlardan en cok faydalanan okul  dyebilirim.,Teknoloji,1
+1315,Sosyall etkinlikler var ama hepsi ucretli ve seçici.,Sosyal ve Kültürel Etkinlikler,0
+1315,Sosyall etkinlikler var ama hepsi ucretli ve seçici.,Ücret ve Finansal,0
+1328,Öğretmenler ilgili ama yönetim tamamen kâr odaklı çalışıyor. Her etkinlik için ayrı ücret isteniyor.,Öğretmen Kadrosu,1
+1328,Öğretmenler ilgili ama yönetim tamamen kâr odaklı çalışıyor. Her etkinlik için ayrı ücret isteniyor.,Yönetim ve İdare,0
+1345,"iDsiplinli, oturmuş bir sistemi olan, hakkaniyetli egitim veren, kaliteli öğretmenlere sahip okul",Genel Değerlendirme,1
+1345,"iDsiplinli, oturmuş bir sistemi olan, hakkaniyetli egitim veren, kaliteli öğretmenlere sahip okul",Disiplin,1
+1345,"iDsiplinli, oturmuş bir sistemi olan, hakkaniyetli egitim veren, kaliteli öğretmenlere sahip okul",Eğitim Kalitesi,1
+1345,"iDsiplinli, oturmuş bir sistemi olan, hakkaniyetli egitim veren, kaliteli öğretmenlere sahip okul",Öğretmen Kadrosu,1
+1375,Öğretmenlerin sınıf yönetimi becerileri çok zayıf. Ders saatleri verimsiz geçiyor.,Disiplin,0
+1375,Öğretmenlerin sınıf yönetimi becerileri çok zayıf. Ders saatleri verimsiz geçiyor.,Öğretmen Kadrosu,0
+1395,Öğretemnler öğrencilerin güçlü yonlerini ödüllendirmek yerine zayıflıklrını süreli ön plana çıkarıyor.,Öğretmen Kadrosu,0
