@@ -1,6 +1,6 @@
 """
 BERTurk (dbmdz/bert-base-turkish-cased) — 5-Fold Cross-Validation
-Dataset : data/dataset.csv
+Dataset : data/sample_dataset.csv
 LR      : 2e-5  (previous grid-search best)
 Output  : results/bert_kfold_results.json
 """
@@ -45,7 +45,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device : {device}")
 
 # ── Data ──────────────────────────────────────────────────────────────────────
-df = pd.read_csv("data/dataset.csv", encoding="utf-8-sig")
+df = pd.read_csv("data/sample_dataset.csv", encoding="utf-8-sig")
 print(f"Dataset: {len(df)} pairs | {df['sentence_id'].nunique()} reviews")
 
 tokenizer = BertTokenizer.from_pretrained(MODEL_NAME)
@@ -176,7 +176,7 @@ for fold_idx, (train_idx, test_idx) in enumerate(kf.split(sids), 1):
             mark = f" ({patience_cnt}/{PATIENCE})"
 
         print(f"  Ep {epoch:2d} | tr={tr_loss:.4f}/{tr_f1:.4f}"
-              f" | val={vl_loss:.4f}/{vl_f1:.4f} | {ep_min:.1f}dk{mark}", flush=True)
+              f" | val={vl_loss:.4f}/{vl_f1:.4f} | {ep_min:.1f}min{mark}", flush=True)
 
         if patience_cnt >= PATIENCE:
             print("  [Early Stop]")
@@ -192,7 +192,7 @@ for fold_idx, (train_idx, test_idx) in enumerate(kf.split(sids), 1):
     elapsed = time.time() - t0
 
     print(f"\n  TEST  acc={te_acc:.4f}  MacF1={te_f1:.4f}"
-          f"  F1-Pos={f1_pos:.4f}  F1-Neg={f1_neg:.4f}  ({elapsed/60:.1f} dk)")
+          f"  F1-Pos={f1_pos:.4f}  F1-Neg={f1_neg:.4f}  ({elapsed/60:.1f} min)")
     print(classification_report(te_labels, te_preds,
                                 target_names=['Negative','Positive']))
 
@@ -214,12 +214,12 @@ for fold_idx, (train_idx, test_idx) in enumerate(kf.split(sids), 1):
     # Incremental save
     with open(RESULTS_FILE, 'w', encoding='utf-8') as f:
         json.dump({'BERTurk': fold_results}, f, indent=2, ensure_ascii=False)
-    print(f"  [{fold_idx}/{N_FOLDS}] kaydedildi -> {RESULTS_FILE}")
+    print(f"  [{fold_idx}/{N_FOLDS}] saved -> {RESULTS_FILE}")
 
     del model; torch.cuda.empty_cache() if torch.cuda.is_available() else None
 
 # ── Final summary ─────────────────────────────────────────────────────────────
-print(f"\nToplam sure: {(time.time()-t_total)/60:.1f} dk")
+print(f"\nTotal time: {(time.time()-t_total)/60:.1f} min")
 print("\n" + "="*60)
 print("BERTurk 5-Fold Summary")
 print("="*60)
@@ -227,4 +227,4 @@ for m in ['accuracy','macro_f1','f1_negative','f1_positive']:
     vals = [r[m] for r in fold_results]
     print(f"  {m:<15}: {np.mean(vals):.4f} ± {np.std(vals):.4f}")
 print("="*60)
-print("=== BERT K-FOLD TAMAM ===")
+print("=== BERT K-FOLD DONE ===")

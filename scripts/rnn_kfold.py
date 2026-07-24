@@ -1,6 +1,6 @@
 """
 BiLSTM & BiGRU — 5-Fold Cross-Validation
-Dataset : data/dataset.csv
+Dataset : data/sample_dataset.csv
 Config  : BiLSTM hidden=64 layers=2 | BiGRU hidden=256 layers=2
 Output  : results/rnn_kfold_results.json
 """
@@ -43,7 +43,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device : {device}")
 
 # ── Data ──────────────────────────────────────────────────────────────────────
-df = pd.read_csv("data/dataset.csv", encoding="utf-8-sig")
+df = pd.read_csv("data/sample_dataset.csv", encoding="utf-8-sig")
 print(f"Dataset: {len(df)} pairs | {df['sentence_id'].nunique()} reviews")
 
 # ── Tokeniser (whitespace) ────────────────────────────────────────────────────
@@ -214,7 +214,7 @@ for model_name, cfg in MODELS_CFG.items():
 
         print(f"    TEST  acc={te_acc:.4f}  MacF1={te_f1:.4f}"
               f"  F1-Pos={f1_pos:.4f}  F1-Neg={f1_neg:.4f}"
-              f"  ({elapsed/60:.1f} dk)")
+              f"  ({elapsed/60:.1f} min)")
 
         fold_results.append({
             "fold":        fold_idx,
@@ -245,7 +245,7 @@ import pathlib
 pathlib.Path("results").mkdir(exist_ok=True)
 with open(RESULTS_FILE, "w", encoding="utf-8") as f:
     json.dump(all_results, f, indent=2, ensure_ascii=False)
-print(f"\nSonuclar kaydedildi: {RESULTS_FILE}")
+print(f"\nResults saved: {RESULTS_FILE}")
 
 # ── Final table ───────────────────────────────────────────────────────────────
 print("\n" + "="*65)
@@ -261,4 +261,4 @@ for mname, folds in all_results.items():
     print(f"{mname:<10} {acc:.4f}±{sacc:.3f}  {mf1:.4f}±{smf1:.3f}"
           f"  {fn:.4f}  {fp:.4f}")
 print("="*65)
-print("=== RNN K-FOLD TAMAM ===")
+print("=== RNN K-FOLD DONE ===")

@@ -20,7 +20,7 @@ The full dataset comprises **2,620 labeled (sentence, aspect) pairs** derived fr
 | Total (sentence, aspect) pairs | 2,620                                      |
 | Unique reviews                 | 1,533                                      |
 | Aspect categories              | 19                                         |
-| Class distribution             | ~68% positive, ~32% negative (2.3:1 ratio) |
+| Class distribution             | 69.6% positive, 30.4% negative (2.3:1 ratio) |
 | Inter-Annotator Agreement      | Cohen's Kappa = 0.702 (Substantial)        |
 
 ### Aspect Categories
@@ -226,7 +226,7 @@ python scripts/rnn_kfold.py
 The dataset was independently annotated by two domain experts. Disagreements were resolved by a third expert.
 
 - **Inter-Annotator Agreement:** Cohen's Kappa = **0.702** (Substantial Agreement, Landis & Koch 1977)
-- Annotation was performed on a random sample of 200 (sentence, aspect) pairs before extending to the full dataset.
+- Annotation was performed on a stratified sample of 200 (sentence, aspect) pairs (140 positive, 60 negative) before extending to the full dataset.
 
 ---
 

@@ -1,9 +1,9 @@
 """
 mBERT + XLM-R  —  5-Fold Cross-Validation
-Karsilastirma: BERTurk'e karsi cok dilli modeller
-Dataset : data/dataset.csv
-LR      : 2e-5  (BERTurk grid-search'ten gelen en iyi)
-Cikti   : results/multilingual_kfold_results.json
+Comparison: multilingual models vs. BERTurk
+Dataset : data/sample_dataset.csv
+LR      : 2e-5  (best value from BERTurk grid-search)
+Output  : results/multilingual_kfold_results.json
 """
 import sys, json, time, random
 sys.stdout.reconfigure(encoding='utf-8')
@@ -52,7 +52,7 @@ MODELS = [
         "model_id":  "xlm-roberta-base",
         "tok_class": XLMRobertaTokenizer,
         "mdl_class": XLMRobertaForSequenceClassification,
-        "use_ttype": False,   # XLM-R token_type_ids kullanmaz
+        "use_ttype": False,   # XLM-R does not use token_type_ids
     },
 ]
 
@@ -65,7 +65,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device : {device}")
 
 # ── Data ──────────────────────────────────────────────────────────────────────
-df = pd.read_csv("data/dataset.csv", encoding="utf-8-sig")
+df = pd.read_csv("data/sample_dataset.csv", encoding="utf-8-sig")
 print(f"Dataset: {len(df)} pairs | {df['sentence_id'].nunique()} reviews")
 
 
@@ -131,17 +131,17 @@ def run_epoch(model, loader, criterion, use_ttype, optimizer=None, scheduler=Non
     return total_loss / len(loader), acc, f1, preds, labels
 
 
-# ── 5-Fold CV (model bazinda) ──────────────────────────────────────────────────
+# ── 5-Fold CV (per model) ──────────────────────────────────────────────────────
 sids    = df['sentence_id'].unique()
 kf      = KFold(n_splits=N_FOLDS, shuffle=True, random_state=SEED)
 
-# Mevcut sonuclari yukle (resume destegi)
+# Load existing results (resume support)
 if RESULTS_FILE.exists():
     with open(RESULTS_FILE, encoding='utf-8') as f:
         all_res = json.load(f)
-    print(f"[RESUME] Mevcut dosya yuklendi: {RESULTS_FILE}")
+    print(f"[RESUME] Existing file loaded: {RESULTS_FILE}")
     for m, folds in all_res.items():
-        print(f"  {m}: {len(folds)} fold tamamlanmis")
+        print(f"  {m}: {len(folds)} folds completed")
 else:
     all_res = {}
 
@@ -154,14 +154,14 @@ for cfg in MODELS:
     print(f"  MODEL: {mname}  ({model_id})")
     print(f"{'#'*60}")
 
-    # Tamamlanan foldlari bul
+    # Find completed folds
     done_folds = {r['fold'] for r in all_res.get(mname, [])}
     if done_folds:
-        print(f"  [RESUME] Tamamlanan foldlar: {sorted(done_folds)} — atlanıyor")
+        print(f"  [RESUME] Completed folds: {sorted(done_folds)} — skipping")
     fold_results = list(all_res.get(mname, []))
 
     if len(done_folds) == N_FOLDS:
-        print(f"  [RESUME] {mname} tum foldlar tamamlanmis, atlaniyor.")
+        print(f"  [RESUME] {mname} all folds completed, skipping.")
         continue
 
     tokenizer   = cfg["tok_class"].from_pretrained(model_id)
@@ -169,7 +169,7 @@ for cfg in MODELS:
 
     for fold_idx, (train_idx, test_idx) in enumerate(kf.split(sids), 1):
         if fold_idx in done_folds:
-            print(f"  [SKIP] Fold {fold_idx} zaten tamamlanmis.")
+            print(f"  [SKIP] Fold {fold_idx} already completed.")
             continue
 
         set_seed(SEED + fold_idx)
@@ -242,7 +242,7 @@ for cfg in MODELS:
                 mark = f" ({patience_cnt}/{PATIENCE})"
 
             print(f"  Ep {epoch:2d} | tr={tr_loss:.4f}/{tr_f1:.4f}"
-                  f" | val={vl_loss:.4f}/{vl_f1:.4f} | {ep_min:.1f}dk{mark}", flush=True)
+                  f" | val={vl_loss:.4f}/{vl_f1:.4f} | {ep_min:.1f}min{mark}", flush=True)
 
             if patience_cnt >= PATIENCE:
                 print("  [Early Stop]")
@@ -257,7 +257,7 @@ for cfg in MODELS:
         elapsed = time.time() - t0
 
         print(f"\n  TEST  acc={te_acc:.4f}  MacF1={te_f1:.4f}"
-              f"  F1-Pos={f1_pos:.4f}  F1-Neg={f1_neg:.4f}  ({elapsed/60:.1f} dk)")
+              f"  F1-Pos={f1_pos:.4f}  F1-Neg={f1_neg:.4f}  ({elapsed/60:.1f} min)")
         print(classification_report(te_labels, te_preds,
                                     target_names=['Negative','Positive']))
 
@@ -279,18 +279,18 @@ for cfg in MODELS:
         all_res[mname] = fold_results
         with open(RESULTS_FILE, 'w', encoding='utf-8') as f:
             json.dump(all_res, f, indent=2, ensure_ascii=False)
-        print(f"  [{fold_idx}/{N_FOLDS}] kaydedildi -> {RESULTS_FILE}")
+        print(f"  [{fold_idx}/{N_FOLDS}] saved -> {RESULTS_FILE}")
 
         del model
         if torch.cuda.is_available(): torch.cuda.empty_cache()
 
-    # Model ozeti
+    # Model summary
     print(f"\n{'='*60}")
-    print(f"{mname} 5-Fold Summary  (toplam {(time.time()-t_total)/60:.1f} dk)")
+    print(f"{mname} 5-Fold Summary  (total {(time.time()-t_total)/60:.1f} min)")
     print(f"{'='*60}")
     for m in ['accuracy','macro_f1','f1_negative','f1_positive']:
         vals = [r[m] for r in fold_results]
         print(f"  {m:<15}: {np.mean(vals):.4f} ± {np.std(vals):.4f}")
 
-print("\n=== MULTILINGUAL KFOLD TAMAM ===")
-print(f"Sonuclar: {RESULTS_FILE}")
+print("\n=== MULTILINGUAL KFOLD DONE ===")
+print(f"Results: {RESULTS_FILE}")
