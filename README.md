@@ -239,7 +239,7 @@ If you use this dataset or code in your research, please cite:
   title   = {Aspect-Based Sentiment Analysis of Turkish School Reviews:
              A Comparative Study of Recurrent and Transformer Architectures},
   author  = {Aksaya, Harun and G{\"u}lse{\c{c}}en, Sevin{\c{c}}},
-  journal = {Electronics},
+  journal = {Under Review},
   year    = {2026},
   note    = {Under review}
 }
