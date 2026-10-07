@@ -1,0 +1,89 @@
+Figure package - Applied Sciences submission
+Manuscript: Aspect-Based Sentiment Analysis of Turkish School Reviews
+
+21 figures, in order of appearance.
+Each file matches the image embedded in the manuscript (verified by SHA-1).
+
+Figure01.png   2279x837 px   155 KB
+    source : IAA_summary.png
+    caption: Figure 1. Inter-annotator agreement summary.
+
+Figure02.png   1955x1242 px   166 KB
+    source : IAA_aspect_agreement.png
+    caption: Figure 2. Per-aspect agreement rates.
+
+Figure03.png   889x784 px   48 KB
+    source : IAA_confusion_matrix.png
+    caption: Figure 3. Annotator confusion matrix.
+
+Figure04.png   852x883 px   53 KB
+    source : DA_01_label_distribution.png
+    caption: Figure 4. Label distribution.
+
+Figure05.png   1962x1243 px   127 KB
+    source : DA_02_aspect_frequency.png
+    caption: Figure 5. Aspect category frequencies.
+
+Figure06.png   2142x1243 px   195 KB
+    source : DA_03_aspect_sentiment.png
+    caption: Figure 6. Per-aspect sentiment distribution.
+
+Figure07.png   1603x875 px   68 KB
+    source : DA_04_sentence_length.png
+    caption: Figure 7. Sentence length distribution.
+
+Figure08.png   1423x785 px   68 KB
+    source : DA_05_aspects_per_review.png
+    caption: Figure 8. Number of aspect annotations per review.
+
+Figure09.png   1777x1421 px   192 KB
+    source : DA_06_cooccurrence_heatmap.png
+    caption: Figure 9. Aspect co-occurrence heatmap.
+
+Figure10.png   1963x884 px   74 KB
+    source : BERT_01_kfold_per_fold.png
+    caption: Figure 10. Macro-F1 score per fold — BiLSTM, BiGRU, and BERTurk (5-Fold Cross-Validation). Each group of bars represents one data split.
+
+Figure11.png   1963x884 px   76 KB
+    source : BERT_02_all_models_comparison.png
+    caption: Figure 11. Mean ± standard deviation across all metrics — BiLSTM, BiGRU, and BERTurk. Error bars indicate standard deviation across five folds.
+
+Figure12.png   2141x1417 px   161 KB
+    source : RNN_03_training_curves.png
+    caption: Figure 12. Training curves for BiLSTM and BiGRU on their respective best folds. Top row: cross-entropy loss; bottom row: Macro-F1. Solid lines denote training set; dashed lines denote validation set.
+
+Figure13.png   1963x802 px   94 KB
+    source : BERT_03_training_curves.png
+    caption: Figure 13. BERTurk training curves — best fold (Fold 1, Macro-F1 = 0.9399). Left panel: cross-entropy loss; right panel: Macro-F1. In both panels the solid line denotes the training set and the dashed line the validation set.
+
+Figure14.png   1782x818 px   103 KB
+    source : RNN_04_confusion_matrices.png
+    caption: Figure 14. Aggregated confusion matrices — BiLSTM and BiGRU (all 5 folds combined). Values represent raw instance counts; percentages are relative to the total sample.
+
+Figure15.png   926x790 px   63 KB
+    source : BERT_04_confusion_matrix.png
+    caption: Figure 15. BERTurk aggregated confusion matrix (all 5 folds combined). Macro-F1 = 0.9266 ± 0.010.
+
+Figure16.png   1783x887 px   74 KB
+    source : RNN_05_stability_boxplot.png
+    caption: Figure 16. K-fold stability box plots — BiLSTM and BiGRU. Individual fold scores are shown as overlaid dots. Left panel: Macro-F1; right panel: F1-Negative.
+
+Figure17.png   1963x892 px   83 KB
+    source : BERT_05_stability_boxplot.png
+    caption: Figure 17. K-fold stability box plots — BiLSTM, BiGRU, and BERTurk. All models are plotted on the same scale for direct comparison.
+
+Figure18.png   2384x742 px   58 KB
+    source : ML_01_all_models_bar.png
+    caption: Figure 18. 5-fold mean ± standard deviation for BERTurk, mBERT, and XLM-R across four evaluation metrics. BERTurk achieves the highest scores on every metric.
+
+Figure19.png   1334x732 px   62 KB
+    source : ML_02_kfold_per_model.png
+    caption: Figure 19. Macro-F1 per fold across five cross-validation splits — BERTurk (blue), mBERT (orange), and XLM-R (green). Even BERTurk's worst-performing fold exceeds the worst-fold results of both multilingual alternatives, indicating a consistently higher performance floor.
+
+Figure20.png   1334x731 px   54 KB
+    source : ML_03_f1neg_comparison.png
+    caption: Figure 20. Per-fold F1-Negative comparison shown as grouped bar charts. The performance gap is most pronounced on this metric, which is the most sensitive indicator of a model's ability to detect negative sentiment in an imbalanced corpus.
+
+Figure21.png   1184x733 px   31 KB
+    source : ML_04_stability_boxplot.png
+    caption: Figure 21. Macro-F1 stability box plots for all three models. BERTurk demonstrates both a higher median and a narrower interquartile range than either multilingual alternative.
