@@ -72,13 +72,17 @@ data/sample_dataset.csv
 
 ## Models & Results
 
-All models were evaluated under **5-fold cross-validation** with **sentence-level (sentence_id) partitioning** to prevent data leakage. Weighted cross-entropy loss was applied in all experiments to address class imbalance.
+All models were evaluated under **5-fold cross-validation** with **sentence-level (sentence_id) partitioning** to prevent data leakage. Class imbalance was addressed throughout: weighted cross-entropy for the neural models, `class_weight="balanced"` for the classical baselines.
 
 ### Main Results (5-Fold Mean ± Std)
 
 
 | Model              | Accuracy            | Macro-F1            | F1-Negative         | F1-Positive         |
 | ------------------ | ------------------- | ------------------- | ------------------- | ------------------- |
+| Majority class     | 0.6961 ± 0.019     | 0.4103 ± 0.007     | 0.0000 ± 0.000     | 0.8207 ± 0.013     |
+| Aspect category only | 0.7463 ± 0.021   | 0.6147 ± 0.025     | 0.3897 ± 0.038     | 0.8398 ± 0.015     |
+| TF-IDF + Logistic Regression | 0.8500 ± 0.014 | 0.8264 ± 0.013 | 0.7627 ± 0.018 | 0.8900 ± 0.012 |
+| TF-IDF + Linear SVM | 0.8604 ± 0.015    | 0.8358 ± 0.017     | 0.7728 ± 0.025     | 0.8989 ± 0.012     |
 | BiLSTM (h=64, L=2) | 0.8121 ± 0.022     | 0.7804 ± 0.020     | 0.6995 ± 0.033     | 0.8613 ± 0.025     |
 | BiGRU (h=256, L=2) | 0.8292 ± 0.018     | 0.7999 ± 0.010     | 0.7258 ± 0.020     | 0.8741 ± 0.022     |
 | mBERT              | 0.9195 ± 0.009     | 0.9033 ± 0.010     | 0.8640 ± 0.015     | 0.9427 ± 0.007     |
@@ -112,10 +116,12 @@ All models were evaluated under **5-fold cross-validation** with **sentence-leve
 ├── data/
 │   └── sample_dataset.csv        # Representative sample (127 pairs, 19 aspects)
 ├── scripts/
+│   ├── baselines_kfold.py        # 4 classical baselines 5-fold CV
 │   ├── rnn_kfold.py              # BiLSTM + BiGRU 5-fold CV
 │   ├── berturk_kfold.py          # BERTurk 5-fold CV
 │   └── multilingual_kfold.py     # mBERT + XLM-R 5-fold CV (resume-capable)
 ├── results/
+│   ├── baseline_kfold_results.json     # classical baselines fold-level results
 │   ├── bert_kfold_results.json         # BERTurk fold-level results
 │   ├── multilingual_kfold_results.json # mBERT + XLM-R fold-level results
 │   └── rnn_kfold_results.json          # BiLSTM + BiGRU fold-level results
@@ -148,6 +154,14 @@ pip install -r requirements.txt
 ---
 
 ## Usage
+
+### Run classical baselines (5-Fold CV)
+
+```bash
+python scripts/baselines_kfold.py
+```
+
+Results are saved to `results/baseline_kfold_results.json`. Runs in seconds; no GPU needed.
 
 ### Train BERTurk (5-Fold CV)
 
@@ -213,11 +227,13 @@ python scripts/rnn_kfold.py
 ## Pre-trained Models
 
 
-| Model   | HuggingFace ID                  | Language(s)   | Params |
-| ------- | -------------------------------- | -------------- | ------ |
-| BERTurk | `dbmdz/bert-base-turkish-cased` | Turkish       | ~110M  |
-| mBERT   | `bert-base-multilingual-cased`  | 104 languages | ~110M  |
-| XLM-R   | `xlm-roberta-base`              | 100 languages | ~125M  |
+| Model   | HuggingFace ID                  | Language(s)   | Vocab | Params |
+| ------- | -------------------------------- | -------------- | ----- | ------ |
+| BERTurk | `dbmdz/bert-base-turkish-cased` | Turkish       | ~32K  | ~110M  |
+| mBERT   | `bert-base-multilingual-cased`  | 104 languages | ~119K | ~178M  |
+| XLM-R   | `xlm-roberta-base`              | 100 languages | ~250K | ~278M  |
+
+All three share the same encoder (12 layers, 768-dim hidden). The parameter counts differ because of vocabulary size: the embedding matrices account for roughly 25M, 92M and 192M parameters respectively.
 
 ---
 
@@ -237,9 +253,9 @@ If you use this dataset or code in your research, please cite:
 ```bibtex
 @article{aksaya2026absa,
   title   = {Aspect-Based Sentiment Analysis of Turkish School Reviews:
-             A Comparative Study of Recurrent and Transformer Architectures},
+             A New Dataset and a Controlled Comparison from Classical Baselines
+             to Monolingual and Multilingual Transformers},
   author  = {Aksaya, Harun and G{\"u}lse{\c{c}}en, Sevin{\c{c}}},
-  journal = {Under Review},
   year    = {2026},
   note    = {Under review}
 }
@@ -251,3 +267,4 @@ If you use this dataset or code in your research, please cite:
 
 The code in this repository is released under the **MIT License**.
 The dataset sample is released for **research purposes only**. Original reviews are the property of their respective authors on okul.com.tr.
+
